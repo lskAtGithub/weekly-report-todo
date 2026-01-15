@@ -66,3 +66,15 @@ impl TodoList {
         &self.todos
     }
 }
+
+impl TodoList {
+    pub fn done(&mut self, id: u32) -> bool {
+        for todo in &mut self.todos {
+            if todo.id == id {
+                todo.completed = true;
+                return true;
+            }
+        }
+        false
+    }
+}
