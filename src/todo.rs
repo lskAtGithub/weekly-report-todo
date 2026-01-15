@@ -60,3 +60,9 @@ impl TodoList {
         }
     }
 }
+
+impl TodoList {
+    pub fn list(&self) -> &Vec<Todo> {
+        &self.todos
+    }
+}
